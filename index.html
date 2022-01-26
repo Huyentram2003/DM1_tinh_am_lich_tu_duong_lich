@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Tính Năm Âm lịch Từ năm Dương Lịch</h2>
+
+<input type="number" id="s1" placeholder="Nhập Tháng"
+       size="30px">
+<button type="button" id="s2" onclick="amDuong()">
+    tính số ngày
+</button>
+
+<p id="s3"></p>
+</div>
+
+<script>
+    let namDuongLich = document.getElementById('s1') ,
+        s3 = document.getElementById('s3'),
+        can = '',
+        chi = '',
+        sub = ' dây là năm ';
+
+    function amDuong() {
+        switch (namDuongLich.value % 10) {
+            case 0:
+                can = ' Canh';
+                break;
+            case 1:
+                can = ' Tân';
+                break;
+            case 2:
+                can = ' Nhâm';
+                break;
+            case 3:
+                can = ' Quý';
+                break;
+            case 4:
+                can = ' Giáp';
+                break;
+            case 5:
+                can = ' Ất';
+                break;
+            case 6:
+                can = ' Binh';
+                break;
+            case 7:
+                can = ' Đinh';
+                break;
+            case 8:
+                can = ' Mậu';
+                break;
+            case 9:
+                can = ' Kỳ';
+                break;
+        }
+        switch (namDuongLich.value % 12) {
+            case 0:
+                chi = ' Thân';
+                break;
+            case 1:
+                chi = ' Dậu';
+                break;
+            case 2:
+                chi = ' Tuất';
+                break;
+            case 3:
+                chi = ' Hợi';
+                break;
+            case 4:
+                chi = ' Tý';
+                break;
+            case 5:
+                chi = ' Sửu';
+                break;
+            case 6:
+                chi = ' Dần';
+                break;
+            case 7:
+                chi = ' Mẹo';
+                break;
+            case 8:
+                chi = ' Thìn';
+                break;
+            case 9:
+                chi = ' Tỵ';
+                break;
+            case 10:
+                chi = ' Ngọ';
+                break;
+            case 11:
+                chi = ' Mùi';
+                break;
+        }
+        s3.innerHTML = `${sub} ${can} ${chi}`;
+    }
+</script>
+</body>
+</html>
